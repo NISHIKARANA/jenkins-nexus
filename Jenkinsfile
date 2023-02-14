@@ -8,7 +8,7 @@ pipeline {
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "159.223.191.140:8081"
         NEXUS_REPOSITORY = "java-app"
-        NEXUS_CREDENTIAL_ID = "NEXUS_CRED"
+        NEXUS_CREDENTIAL_ID = "Nexus_Jen"
     }
     stages {
         stage("Clone code from GitHub") {
@@ -21,7 +21,7 @@ pipeline {
         stage("Maven Build") {
             steps {
                 script {
-                    sh "mvn package -DskipTests=true"
+                    bat "mvn package -DskipTests=true"
                 }
             }
         }
